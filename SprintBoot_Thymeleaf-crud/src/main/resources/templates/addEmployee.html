@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+<body>
+	<div class="container">
+		<h1>Employee Management System</h1>
+		<hr>
+		<h2>Add Employee</h2>
+		<form action="#" th:action="@{/employees}" th:object="${employee}" method="POST">
+			<input type="text" th:field="*{firtname}" placeholder="Employee First Name" class="form-control mb-4 col-4">
+
+            <input type="text" th:field="*{lastname}" placeholder="Employee Last Name" class="form-control mb-4 col-4">
+
+            <input type="text" th:field="*{email}" placeholder="Employee Email" class="form-control mb-4 col-4">
+
+            <button type="submit" class="btn btn-info col-2"> Save Employee</button>
+		</form>
+		<a th:href="@{/}"> Back to Employee List</a>
+	</div>
+</body>
+</html>
